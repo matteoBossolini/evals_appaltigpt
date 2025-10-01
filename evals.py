@@ -61,7 +61,7 @@ if 'available_tenders' not in st.session_state:
 def load_tenders():
     """Load available tenders from Supabase."""
     try:
-        response = supabase.table('tenders').select('id, name, company_id, info').eq('company_id', '1').execute()
+        response = supabase.table('tenders').select('id, name, company_id, info').eq('company_id', '47').execute()
         if response.data:
             st.session_state.available_tenders = response.data
             return response.data
