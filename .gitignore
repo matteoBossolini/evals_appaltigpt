@@ -40,5 +40,5 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Streamlit
-.streamlit/
+# Streamlit (allow config.toml for Railway)
+.streamlit/secrets.toml

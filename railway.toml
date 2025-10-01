@@ -1,0 +1,12 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+
+# Streamlit doesn't have a /health endpoint, so we disable health checks
+# or use the root path
+[env]
+# Ensure Python output is not buffered for better logging
+PYTHONUNBUFFERED = "1"
+PYTHONDONTWRITEBYTECODE = "1"
